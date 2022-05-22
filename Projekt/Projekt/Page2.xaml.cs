@@ -18,16 +18,16 @@ namespace Projekt
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Page
+    public partial class Page2 : Page
     {
-        public MainWindow()
+        public Page2()
         {
             InitializeComponent();
         }
 
-        private void LogIn(object sender, RoutedEventArgs e)
+        private void Back(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Page2.xaml", UriKind.RelativeOrAbsolute));
+            this.NavigationService.Navigate(new Uri("MainWindow.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }
