@@ -27,7 +27,16 @@ namespace Projekt
 
         private void LogIn(object sender, RoutedEventArgs e)
         {
+            if(Pass.Password.ToString() != "" || Login.Text != "")
+            {
+                MessageBox.Show("Nieprawidłowe dane logowania", "Błęd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
             this.NavigationService.Navigate(new Uri("Page2.xaml", UriKind.RelativeOrAbsolute));
+        }
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }
