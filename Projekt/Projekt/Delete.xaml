@@ -1,0 +1,24 @@
+﻿<Window x:Class="Projekt.Delete"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt"
+        mc:Ignorable="d"
+        Title="Usuń produkt" Height="100" Width="Auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Margin="5" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Czy na pewno chcesz usunąc produkt?</TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Anuluj" Grid.Column="0" Margin="5"></Button>
+            <Button Content="Modyfikuj" Grid.Column="1" Margin="5"></Button>
+        </Grid>
+    </Grid>
+</Window>
