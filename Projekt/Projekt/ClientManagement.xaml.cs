@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Projekt
 {
     /// <summary>
-    /// Logika interakcji dla klasy UsersManagement.xaml
+    /// Logika interakcji dla klasy ClientManagement.xaml
     /// </summary>
-    public partial class UsersManagement : Window
+    public partial class ClientManagement : Window
     {
-        public UsersManagement()
+        public ClientManagement()
         {
             InitializeComponent();
         }
