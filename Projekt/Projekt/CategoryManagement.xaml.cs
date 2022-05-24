@@ -17,11 +17,32 @@ namespace Projekt
     /// <summary>
     /// Logika interakcji dla klasy CategoryManagement.xaml
     /// </summary>
-    public partial class CategoryManagement : Window
+    public partial class CategoryManagement : Page
     {
         public CategoryManagement()
         {
             InitializeComponent();
+        }
+        private void Add(object sender, RoutedEventArgs e)
+        {
+            Window win = new AddNewCategory();
+            win.Show();
+        }
+        private void Modify(object sender, RoutedEventArgs e)
+        {
+            Window win = new ModifyCategory();
+            win.Show();
+
+        }
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Czy na pewno chcesz usunąć", "Usuń", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+        
+        }
+        private void Back(object sender, RoutedEventArgs e)
+        {
+
+            this.NavigationService.Navigate(new Uri("Menu.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

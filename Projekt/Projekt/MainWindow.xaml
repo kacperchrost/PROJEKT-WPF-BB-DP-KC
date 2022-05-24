@@ -13,7 +13,7 @@
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="C:\Users\pieci\Desktop\studia\semestr 6\WPF\Projekt\Repo_kACPER\Projekt\Projekt\css\MyStyles.xaml">
+                <ResourceDictionary Source="css/MyStyles.xaml">
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

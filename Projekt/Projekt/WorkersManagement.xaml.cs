@@ -23,5 +23,26 @@ namespace Projekt
         {
             InitializeComponent();
         }
+        private void Add(object sender, RoutedEventArgs e)
+        {
+            Window win = new AddNewWorker();
+            win.Show();
+        }
+        private void Modify(object sender, RoutedEventArgs e)
+        {
+            Window win = new ModifyWorker();
+            win.Show();
+
+        }
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Czy na pewno chcesz usunąć", "Usuń", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+
+        }
+        private void Back(object sender, RoutedEventArgs e)
+        {
+
+            this.NavigationService.Navigate(new Uri("Menu.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

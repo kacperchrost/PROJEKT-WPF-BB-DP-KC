@@ -17,11 +17,32 @@ namespace Projekt
     /// <summary>
     /// Logika interakcji dla klasy SupplyManagement.xaml
     /// </summary>
-    public partial class SupplyManagement : Window
+    public partial class SupplyManagement : Page
     {
         public SupplyManagement()
         {
             InitializeComponent();
+        }
+        private void Add(object sender, RoutedEventArgs e)
+        {
+            Window win = new AddNewSupply();
+            win.Show();
+        }
+        private void Modify(object sender, RoutedEventArgs e)
+        {
+            Window win = new ModifySupply();
+            win.Show();
+
+        }
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Czy na pewno chcesz usunąć", "Usuń", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+
+        }
+        private void Back(object sender, RoutedEventArgs e)
+        {
+
+            this.NavigationService.Navigate(new Uri("Menu.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

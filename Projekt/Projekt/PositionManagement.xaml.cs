@@ -17,11 +17,32 @@ namespace Projekt
     /// <summary>
     /// Logika interakcji dla klasy PositionManagement.xaml
     /// </summary>
-    public partial class PositionManagement : Window
+    public partial class PositionManagement : Page
     {
         public PositionManagement()
         {
             InitializeComponent();
+        }
+        private void Add(object sender, RoutedEventArgs e)
+        {
+            Window win = new AddNewPosition();
+            win.Show();
+        }
+        private void Modify(object sender, RoutedEventArgs e)
+        {
+            Window win = new ModifyPosition();
+            win.Show();
+
+        }
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Czy na pewno chcesz usunąć", "Usuń", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+
+        }
+        private void Back(object sender, RoutedEventArgs e)
+        {
+
+            this.NavigationService.Navigate(new Uri("Menu.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }
