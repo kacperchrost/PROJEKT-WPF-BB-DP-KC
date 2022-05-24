@@ -55,20 +55,181 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddClient.xaml.cs">
+      <DependentUpon>AddClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewCategory.xaml.cs">
+      <DependentUpon>AddNewCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewOrder.xaml.cs">
+      <DependentUpon>AddNewOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewPosition.xaml.cs">
+      <DependentUpon>AddNewPosition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewSupply.xaml.cs">
+      <DependentUpon>AddNewSupply.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewWorker.xaml.cs">
+      <DependentUpon>AddNewWorker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryManagement.xaml.cs">
+      <DependentUpon>CategoryManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientManagement.xaml.cs">
+      <DependentUpon>ClientManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyCategory.xaml.cs">
+      <DependentUpon>ModifyCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyClient.xaml.cs">
+      <DependentUpon>ModifyClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyOrder.xaml.cs">
+      <DependentUpon>ModifyOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyPosition.xaml.cs">
+      <DependentUpon>ModifyPosition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModifySupply.xaml.cs">
+      <DependentUpon>ModifySupply.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyWorker.xaml.cs">
+      <DependentUpon>ModifyWorker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersManagement.xaml.cs">
+      <DependentUpon>OrdersManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PositionManagement.xaml.cs">
+      <DependentUpon>PositionManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyManagement.xaml.cs">
+      <DependentUpon>SupplyManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkersManagement.xaml.cs">
+      <DependentUpon>WorkersManagement.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AddClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddNewCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddNewOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddNewPosition.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddNewSupply.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddNewWorker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddProductPop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CategoryManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClientManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Delete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AddProductPop.xaml.cs">
+      <DependentUpon>AddProductPop.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Delete.xaml.cs">
+      <DependentUpon>Delete.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ModifyCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModifyClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModifyOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModifyPosition.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModifyProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModifySupply.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModifyWorker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrdersManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PositionManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProductManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SupplyManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WorkersManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModifyProduct.xaml.cs">
+      <DependentUpon>ModifyProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page2.xaml.cs">
+      <DependentUpon>Page2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProductManagement.xaml.cs">
+      <DependentUpon>ProductManagement.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

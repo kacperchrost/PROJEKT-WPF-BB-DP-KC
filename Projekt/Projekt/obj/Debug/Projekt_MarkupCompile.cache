@@ -12,9 +12,9 @@ DEBUG;TRACE
 C:\Users\kacpe\OneDrive - Politechnika Białostocka\POLITECHNIKA\VI semestr\WPF\PS\Projekt\PROJEKT-WPF-BB-DP-KC\Projekt\Projekt\App.xaml
 24986363561
 
-291162235809
+282004595176
 13-1505183044
 AddClient.xaml;AddNewCategory.xaml;AddNewOrder.xaml;AddNewPosition.xaml;AddNewSupply.xaml;AddNewWorker.xaml;AddProductPop.xaml;CategoryManagement.xaml;ClientManagement.xaml;Delete.xaml;MainWindow.xaml;ModifyCategory.xaml;ModifyClient.xaml;ModifyOrder.xaml;ModifyPosition.xaml;ModifyProduct.xaml;ModifySupply.xaml;ModifyWorker.xaml;OrdersManagement.xaml;Page2.xaml;PositionManagement.xaml;ProductManagement.xaml;SupplyManagement.xaml;WorkersManagement.xaml;
 
-True
+False
 
