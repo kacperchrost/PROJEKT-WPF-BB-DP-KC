@@ -32,7 +32,7 @@ namespace Projekt
                 MessageBox.Show("Nieprawidłowe dane logowania", "Błęd", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            this.NavigationService.Navigate(new Uri("Page2.xaml", UriKind.RelativeOrAbsolute));
+            this.NavigationService.Navigate(new Uri("Menu.xaml", UriKind.RelativeOrAbsolute));
         }
         private void Exit(object sender, RoutedEventArgs e)
         {

@@ -17,7 +17,7 @@ namespace Projekt
     /// <summary>
     /// Logika interakcji dla klasy WorkersManagement.xaml
     /// </summary>
-    public partial class WorkersManagement : Window
+    public partial class WorkersManagement : Page
     {
         public WorkersManagement()
         {

@@ -24,5 +24,43 @@ namespace Projekt
         {
             InitializeComponent();
         }
+
+
+        private void Product(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("ProductManagement.xaml", UriKind.RelativeOrAbsolute));
+        }
+        private void Client(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("ClientManagement.xaml", UriKind.RelativeOrAbsolute));
+        }
+        private void Worker(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("WorkersManagement.xaml", UriKind.RelativeOrAbsolute));
+        }
+        private void Supply(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("SupplyManagement.xaml", UriKind.RelativeOrAbsolute));
+        }
+        private void Order(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("OrdersManagement.xaml", UriKind.RelativeOrAbsolute));
+        }
+        private void About(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("MainWindow.xaml", UriKind.RelativeOrAbsolute));
+        }
+        private void Category(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("CategoryManagement.xaml", UriKind.RelativeOrAbsolute));
+        }
+        private void LogOut(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("MainWindow.xaml", UriKind.RelativeOrAbsolute));
+        }
+      
+
+
     }
 }
+
