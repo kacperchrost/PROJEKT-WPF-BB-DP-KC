@@ -56,7 +56,7 @@ namespace Projekt
         }
         private void LogOut(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("MainWindow.xaml", UriKind.RelativeOrAbsolute));
+            this.NavigationService.Navigate(new Uri("Login.xaml", UriKind.RelativeOrAbsolute));
         }
       
 
