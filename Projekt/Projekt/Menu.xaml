@@ -17,35 +17,39 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-    <StackPanel Height="360" Width="300">
-        <Grid Background="LightGray">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+    <StackPanel Height="211" Width="220" Background="LightGray">
+        <Border BorderBrush="DimGray" BorderThickness="1" Margin="3" Padding="5">
+            <Grid Background="LightGray">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
 
-        </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" Grid.Column="0" Margin="5" HorizontalAlignment="Right">Zalogowany jako:</Label>
-        <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"  Margin="5" >Jan Nowak </Label>
-        <Button Grid.Row="1" Grid.Column="0" Margin="10 10 10 10" Click="Product">Produkty</Button>
-        <Button Grid.Row="2" Grid.Column="0" Margin="10 10 10 10" Click="Client">Klienci</Button>
-        <Button Grid.Row="3" Grid.Column="0" Margin="10 10 10 10" Click="Worker">Pracownicy</Button>
-        <Button Grid.Row="4" Grid.Column="0" Margin="10 10 10 10" Click="Supply">Dostawy</Button>
-        <Button Grid.Row="5" Grid.Column="0" Margin="10 10 10 10" Click="Order">Zamówienia</Button>
-        <Button Grid.Row="6" Grid.Column="0" Margin="10 10 10 10" Click="Category" >Kategorie</Button>
-        <Button Grid.Row="7" Grid.Column="0" Margin="10 10 10 10" Click="About" >O nas</Button>
-        <Button Grid.Row="8" Grid.Column="2" Margin="10 20 10 10" Click="LogOut" Style="{StaticResource RedGradientBtn}">Wyloguj</Button>
-    </Grid>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Margin="5" HorizontalAlignment="Right">Zalogowany jako:</Label>
+                <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"  Margin="5" >Jan Nowak</Label>
+                <Button Grid.Row="1" Grid.Column="0" Margin="10 0 10 0" Click="Product" HorizontalAlignment="Left">Produkty</Button>
+                <Button Grid.Row="2" Grid.Column="0" Margin="10 0 10 0" Click="Client" HorizontalAlignment="Left">Klienci</Button>
+                <Button Grid.Row="3" Grid.Column="0" Margin="10 0 10 0" Click="Worker" HorizontalAlignment="Left">Pracownicy</Button>
+                <Button Grid.Row="4" Grid.Column="0" Margin="10 0 10 0" Click="Supply" HorizontalAlignment="Left">Dostawy</Button>
+                <Button Grid.Row="5" Grid.Column="0" Margin="10 0 10 0" Click="Order" HorizontalAlignment="Left">Zamówienia</Button>
+                <Button Grid.Row="6" Grid.Column="0" Margin="10 0 10 0" Click="Category" HorizontalAlignment="Left">Kategorie</Button>
+                <Button Grid.Row="7" Grid.Column="0" Margin="10 0 10 0" Click="About" HorizontalAlignment="Left">O nas</Button>
+                <Button Grid.Row="8" Grid.Column="2" Margin="10 20 10 10" Click="LogOut">
+                    &lt;Wyloguj&gt;</Button>
+            </Grid>
+        </Border>
+
     </StackPanel>
     
 </Page>

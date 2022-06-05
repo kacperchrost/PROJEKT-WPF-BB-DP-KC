@@ -3,7 +3,7 @@
                     xmlns:local="clr-namespace:Projekt.css">
 
 
-    <Style x:Key="RedGradientBtn" TargetType="Button">
+    <Style x:Key="BlueButton" TargetType="Button">
         <Setter Property="Control.Foreground" Value="White" />
         <Setter Property="Control.Background" Value="Blue" />
     </Style>
