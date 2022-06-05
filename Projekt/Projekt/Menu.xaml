@@ -17,7 +17,7 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-    <StackPanel Height="211" Width="220" Background="LightGray">
+    <StackPanel Height="211" Width="240" Background="LightGray">
         <Border BorderBrush="DimGray" BorderThickness="1" Margin="3" Padding="5">
             <Grid Background="LightGray">
                 <Grid.RowDefinitions>
