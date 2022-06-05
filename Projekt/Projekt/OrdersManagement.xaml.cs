@@ -23,5 +23,27 @@ namespace Projekt
         {
             InitializeComponent();
         }
+
+        private void AddNewOrder(object sender, RoutedEventArgs e)
+        {
+            Window w = new AddNewOrder();
+            w.ShowDialog();
+        }
+
+        private void ModifyOrder(object sender, RoutedEventArgs e)
+        {
+            Window w = new ModifyOrder();
+            w.ShowDialog();
+        }
+
+        private void DeleteOrder(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Wybrane zamówinie zostało usunięte!", "Uwaga", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
+
+        private void BackFromOrders(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Menu.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }
