@@ -5,60 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt"
         mc:Ignorable="d"
-        Title="Zarządzanie produktami" Height="450" Width="800"
-      Background="LightGray">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <GridSplitter Grid.Column="1" Width="5" ResizeBehavior="PreviousAndNext"/>
-        <Grid Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Button Grid.Row="0" Click="Add" Content="Dodaj" Margin="5" />
-            <Button Grid.Row="1" Click="Modify"  Content="Modyfikuj" Margin="5"/>
-            <Button Grid.Row="2" Click="Delete" Content="Usuń" Margin="5"/>
-            <Button Grid.Row="3" Click="Back" Content="Cofnij" Margin="5"/>
-        </Grid>
-        <StackPanel Grid.Column="2">
-            <Grid>
+        Title="Zarządzanie produktami" Height="auto" Width="auto "
+      Background="Blue">
+    <StackPanel Height="450" Width="800">
+        <Grid Background="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <GridSplitter Grid.Column="1" Width="5" ResizeBehavior="PreviousAndNext"/>
+            <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <GroupBox Grid.Row="0" Margin="5" Header="Wyszukiwanie">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Button Content="Szukaj" Grid.Column="1" Margin="5"></Button>
-                        <TextBox Grid.Column="0" Margin="5"></TextBox>
-                    </Grid>
-                </GroupBox>
-                <GroupBox Grid.Row="2" Margin="5" Header="Elementy">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Content="ID" Margin="5" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
-                        <Label Content="Nazwa" Margin="5" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"/>
-                        <Label Content="Cena" Margin="5" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2"/>
-                        <Label Content="Ilość" Margin="5" Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="2"/>
-                        <Label Content="Opis" Margin="5" Grid.Column="4" Grid.Row="0" Grid.ColumnSpan="2"/>
-                    </Grid>
-                </GroupBox>
+                <Button Grid.Row="0" Click="Add" Content="Dodaj" Margin="5" />
+                <Button Grid.Row="1" Click="Modify"  Content="Modyfikuj" Margin="5"/>
+                <Button Grid.Row="2" Click="Delete" Content="Usuń" Margin="5"/>
+                <Button Grid.Row="3" Click="Back" Content="Cofnij" Margin="5"/>
             </Grid>
-        </StackPanel>
-    </Grid>
+            <StackPanel Grid.Column="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <GroupBox Grid.Row="0" Margin="5" Header="Wyszukiwanie">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Content="Szukaj" Grid.Column="1" Margin="5"></Button>
+                            <TextBox Grid.Column="0" Margin="5"></TextBox>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Row="2" Margin="5" Header="Elementy">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="ID" Margin="5" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
+                            <Label Content="Nazwa" Margin="5" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"/>
+                            <Label Content="Cena" Margin="5" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2"/>
+                            <Label Content="Ilość" Margin="5" Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="2"/>
+                            <Label Content="Opis" Margin="5" Grid.Column="4" Grid.Row="0" Grid.ColumnSpan="2"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
 </Page>
