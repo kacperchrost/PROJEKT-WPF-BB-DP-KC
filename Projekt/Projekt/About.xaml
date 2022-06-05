@@ -1,0 +1,19 @@
+﻿<Page x:Class="Projekt.About"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:h="http://helix-toolkit.org/wpf"
+      xmlns:local="clr-namespace:Projekt"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="About" Background="Blue">
+    <StackPanel Height="400" Width="700">
+        <Grid Background="LightGray">
+            <h:HelixViewport3D >
+                <h:DefaultLights/>
+                <h:Teapot/>
+            </h:HelixViewport3D>
+        </Grid>
+    </StackPanel>
+</Page>
