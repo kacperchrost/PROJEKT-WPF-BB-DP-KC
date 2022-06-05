@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Projekt
 {
     /// <summary>
-    /// Logika interakcji dla klasy AddClient.xaml
+    /// Logika interakcji dla klasy AddProductPop.xaml
     /// </summary>
-    public partial class AddClient : Window
+    public partial class AddNewProduct : Window
     {
-        public AddClient()
+        public AddNewProduct()
         {
             InitializeComponent();
         }

@@ -25,7 +25,7 @@ namespace Projekt
         }
         private void Add(object sender, RoutedEventArgs e)
         {
-            Window win = new AddClient();
+            Window win = new AddNewClient();
             win.ShowDialog();
         }
         private void Modify(object sender, RoutedEventArgs e)

@@ -48,7 +48,7 @@ namespace Projekt
         }
         private void About(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("MainWindow.xaml", UriKind.RelativeOrAbsolute));
+            this.NavigationService.Navigate(new Uri("Login.xaml", UriKind.RelativeOrAbsolute));
         }
         private void Category(object sender, RoutedEventArgs e)
         {

@@ -18,16 +18,16 @@ namespace Projekt
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Page
+    public partial class Login : Page
     {
-        public MainWindow()
+        public Login()
         {
             InitializeComponent();
         }
 
         private void LogIn(object sender, RoutedEventArgs e)
         {
-            if(Pass.Password.ToString() != "" || Login.Text != "")
+            if(Pass.Password.ToString() != "" || LoginText.Text != "")
             {
                 MessageBox.Show("Nieprawidłowe dane logowania", "Błęd", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
