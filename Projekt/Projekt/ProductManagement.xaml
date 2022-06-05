@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:Projekt"
         mc:Ignorable="d"
         Title="Zarządzanie produktami" Height="auto" Width="auto "
+      Loaded="Window_Loaded"
       Background="Blue">
+    <Page.Resources>
+        <local:db_projectDataSet x:Key="db_projectDataSet"/>
+        <CollectionViewSource x:Key="productViewSource" Source="{Binding Product, Source={StaticResource db_projectDataSet}}"/>
+    </Page.Resources>
     <StackPanel Height="450" Width="800">
         <Grid Background="LightGray">
             <Grid.ColumnDefinitions>
@@ -28,7 +33,7 @@
                 <Button Grid.Row="3" Click="Back" Content="Cofnij" Margin="5"/>
             </Grid>
             <StackPanel Grid.Column="2">
-                <Grid>
+                <Grid DataContext="{StaticResource productViewSource}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
@@ -44,7 +49,7 @@
                         </Grid>
                     </GroupBox>
                     <GroupBox Grid.Row="2" Margin="5" Header="Elementy">
-                        <DataGrid x:Name="ProductGrid" Height="200"/>
+                        <DataGrid x:Name="ProductGrid" Height="200" ItemsSource="{Binding}" Margin="2,0,-2,0"/>
                     </GroupBox>
                 </Grid>
             </StackPanel>

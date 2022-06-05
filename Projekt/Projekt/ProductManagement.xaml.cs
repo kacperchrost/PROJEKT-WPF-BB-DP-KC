@@ -19,9 +19,24 @@ namespace Projekt
     /// </summary>
     public partial class ProductManagement : Page
     {
+        private db_projectDataSet db_ProjectDataSet;
+        private db_projectDataSetTableAdapters.ProductTableAdapter proAdapter;
+        private CollectionViewSource productViewSource;
+
         public ProductManagement()
         {
             InitializeComponent();
+            
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            db_ProjectDataSet = (db_projectDataSet)this.FindResource("db_projectDataSet");
+            proAdapter = new db_projectDataSetTableAdapters.ProductTableAdapter();
+            proAdapter.Fill(db_ProjectDataSet.Product);
+            productViewSource = ((CollectionViewSource)(this.FindResource("productViewSource")));
+            productViewSource.View.MoveCurrentToFirst();
+            //todo zorbić to dla reszty i dodać przycisk save
         }
 
         private void Add(object sender, RoutedEventArgs e)
@@ -45,5 +60,7 @@ namespace Projekt
 
             this.NavigationService.Navigate(new Uri("Menu.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        
     }
 }
