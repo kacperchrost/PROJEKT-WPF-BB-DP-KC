@@ -46,18 +46,7 @@
                         </Grid>
                     </GroupBox>
                     <GroupBox Grid.Row="2" Margin="5" Header="Elementy">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Content="ID" Margin="5" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
-                            <Label Content="Data złożenia" Margin="5" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"/>
-                            <Label Content="ID pracownika" Margin="5" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2"/>
-                            <Label Content="ID klienta" Margin="5" Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="2"/>
-                        </Grid>
+                        <DataGrid x:Name="OrdersGrid" Height="200"/>
                     </GroupBox>
                 </Grid>
             </StackPanel>
