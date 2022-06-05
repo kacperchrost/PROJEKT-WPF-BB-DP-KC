@@ -26,12 +26,12 @@ namespace Projekt
         private void Add(object sender, RoutedEventArgs e)
         {
             Window win = new AddClient();
-            win.Show();
+            win.ShowDialog();
         }
         private void Modify(object sender, RoutedEventArgs e)
         {
             Window win = new ModifyClient();
-            win.Show();
+            win.ShowDialog();
         }
         private void Delete(object sender, RoutedEventArgs e)
         {
