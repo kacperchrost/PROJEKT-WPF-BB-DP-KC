@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt"
         mc:Ignorable="d"
-        Title="Zarządzanie produktami" Height="450" Width="800"
-      Background="LightGray">
-    <Grid>
+        Title="Zarządzanie produktami" Height="auto" Width="auto "
+      Background="Blue">
+    <StackPanel Height="450" Width="800" >
+        <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
@@ -55,6 +56,8 @@
             </Grid>
         </StackPanel>
     </Grid>
+    </StackPanel>
+    
 </Page>
 
 

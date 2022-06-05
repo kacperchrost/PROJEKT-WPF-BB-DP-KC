@@ -5,10 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Projekt"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      
       Title="Menu"
-      Height="475" Width="400"
-      Background="LightGray">
+      Height="auto" Width="auto"
+      Background="Blue">
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -17,7 +17,8 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-    <Grid Margin="50">
+    <StackPanel Height="360" Width="300">
+        <Grid Background="LightGray">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -43,6 +44,8 @@
         <Button Grid.Row="5" Grid.Column="0" Margin="10 10 10 10" Click="Order">Zamówienia</Button>
         <Button Grid.Row="6" Grid.Column="0" Margin="10 10 10 10" Click="Category" >Kategorie</Button>
         <Button Grid.Row="7" Grid.Column="0" Margin="10 10 10 10" Click="About" >O nas</Button>
-        <Button Grid.Row="8" Grid.Column="2" Margin="10 20 10 0" Click="LogOut" Style="{StaticResource RedGradientBtn}">Wyloguj</Button>
+        <Button Grid.Row="8" Grid.Column="2" Margin="10 20 10 10" Click="LogOut" Style="{StaticResource RedGradientBtn}">Wyloguj</Button>
     </Grid>
+    </StackPanel>
+    
 </Page>
