@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:Projekt"
         mc:Ignorable="d"
         Title="Dodaj nowe zamówienie" Height="150" Width="400"
+        MinHeight="150" MinWidth="400"
+        MaxHeight="150" MaxWidth="400"
         Background="LightGray">
     <Grid>
         <Grid.RowDefinitions>

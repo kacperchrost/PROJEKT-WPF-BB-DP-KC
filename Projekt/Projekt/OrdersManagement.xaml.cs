@@ -17,7 +17,7 @@ namespace Projekt
     /// <summary>
     /// Logika interakcji dla klasy OrdersManagement.xaml
     /// </summary>
-    public partial class OrdersManagement : Window
+    public partial class OrdersManagement : Page
     {
         public OrdersManagement()
         {

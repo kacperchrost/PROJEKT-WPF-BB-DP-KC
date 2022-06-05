@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:Projekt"
         mc:Ignorable="d"
         Title="Dodaj nowego pracownika" Height="250" Width="400"
+        MinHeight="250" MinWidth="400"
+        MaxHeight="250" MaxWidth="400"
         Background="LightGray">
     <Grid>
         <Grid.RowDefinitions>
