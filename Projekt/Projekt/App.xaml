@@ -6,9 +6,8 @@
              
              >
     <Application.Resources>
-        <Style TargetType="{x:Type Page}" x:Key="GelButton" >
-            <Setter Property="Background" Value="Blue"/>
-        </Style>
+
+        
         <Style TargetType="{x:Type Button}">
             <Setter Property="Background" Value="LightGray"/>
             <Setter Property="Template">
@@ -20,10 +19,32 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Style.Triggers>
+           <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="Blue"/>
-                    <Setter Property="Foreground" Value="White"/>
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" 
+                                                To="Blue" 
+                                                Duration="0:0:0.2"/>
+                                <ColorAnimation Storyboard.TargetProperty="Foreground.(SolidColorBrush.Color)" 
+                                                To="White" 
+                                                Duration="0:0:0.2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" 
+                                                To="LightGray" 
+                                                Duration="0:0:0.2"/>
+                                <ColorAnimation Storyboard.TargetProperty="Foreground.(SolidColorBrush.Color)" 
+                                                To="Black" 
+                                                Duration="0:0:0.2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -37,6 +58,68 @@
             <Setter Property="Background" Value="Blue"/>
             <Setter Property="Foreground" Value="White"/>
         </Style>
+        <Style TargetType="{x:Type DataGrid}">
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#DDDDDD" />
+            <Setter Property="VerticalGridLinesBrush" Value="#DDDDDD" />
+            <Setter Property="ColumnWidth" Value="*" />
+        </Style>
+        <Style TargetType="{x:Type DataGridRow}">
+            <Setter Property="Background" Value="LightGray"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" 
+                                                To="Blue" 
+                                                Duration="0:0:0.2"/>
+                                <ColorAnimation Storyboard.TargetProperty="Foreground.(SolidColorBrush.Color)" 
+                                                To="White" 
+                                                Duration="0:0:0.2"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" 
+                                                To="LightGray" 
+                                                Duration="0:0:0.1"/>
+                                <ColorAnimation Storyboard.TargetProperty="Foreground.(SolidColorBrush.Color)" 
+                                                To="Black" 
+                                                Duration="0:0:0.1"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#DDDDDD"/>
+            <Setter Property="TextElement.FontStyle" Value="Italic"/>
+            <Setter Property="TextElement.FontWeight" Value="Bold"/>
+        </Style>
+        <Style TargetType="{x:Type DataGridRowHeader}">
+            <Setter Property="Background" Value="LightGray"/>
+        </Style>
+
+        
+        <Style TargetType="{x:Type ScrollBar}">
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="BorderBrush" Value="#DDDDDD"/>
+        </Style>
+        <Style TargetType="{x:Type Thumb}">
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="BorderBrush" Value="LightGray"/>
+        </Style>
+
+        
+
 
 
     </Application.Resources>

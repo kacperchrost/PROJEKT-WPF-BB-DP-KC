@@ -35,7 +35,7 @@ namespace Projekt
             proAdapter = new db_projectDataSetTableAdapters.ProductTableAdapter();
             proAdapter.Fill(db_ProjectDataSet.Product);
             productViewSource = ((CollectionViewSource)(this.FindResource("productViewSource")));
-            productViewSource.View.MoveCurrentToFirst();
+            //productViewSource.View.MoveCurrentToFirst();
             //todo zorbić to dla reszty i dodać przycisk save
         }
 
