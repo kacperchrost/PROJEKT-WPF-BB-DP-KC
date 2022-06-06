@@ -21,11 +21,13 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" Click="Add" Content="Dodaj" Margin="5" />
-                <Button Grid.Row="1" Click="Modify"  Content="Modyfikuj" Margin="5"/>
-                <Button Grid.Row="2" Click="Delete" Content="Usuń" Margin="5"/>
-                <Button Grid.Row="3" Click="Back" Content="Cofnij" Margin="5"/>
+                <Button Grid.Row="0" Click="Save" Content="Zapisz" Margin="5" />
+                <Button Grid.Row="1" Click="Add" Content="Dodaj" Margin="5" />
+                <Button Grid.Row="2" Click="Modify"  Content="Modyfikuj" Margin="5"/>
+                <Button Grid.Row="3" Click="Delete" Content="Usuń" Margin="5"/>
+                <Button Grid.Row="4" Click="Back" Content="Cofnij" Margin="5"/>
             </Grid>
             <StackPanel Grid.Column="2">
                 <Grid>

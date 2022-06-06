@@ -45,5 +45,15 @@ namespace Projekt
         {
             NavigationService.Navigate(new Uri("Menu.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void Save(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PrintOrder(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

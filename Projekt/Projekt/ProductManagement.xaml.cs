@@ -61,6 +61,9 @@ namespace Projekt
             this.NavigationService.Navigate(new Uri("Menu.xaml", UriKind.RelativeOrAbsolute));
         }
 
-        
+        private void Save(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

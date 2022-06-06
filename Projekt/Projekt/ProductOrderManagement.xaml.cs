@@ -10,42 +10,42 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Projekt
 {
     /// <summary>
-    /// Logika interakcji dla klasy CategoryManagement.xaml
+    /// Logika interakcji dla klasy ProductOrderManagement.xaml
     /// </summary>
-    public partial class CategoryManagement : Page
+    public partial class ProductOrderManagement : Page
     {
-        public CategoryManagement()
+        public ProductOrderManagement()
         {
             InitializeComponent();
         }
-        private void Add(object sender, RoutedEventArgs e)
-        {
-            Window win = new AddNewCategory();
-            win.ShowDialog();
-        }
-        private void Modify(object sender, RoutedEventArgs e)
-        {
-            Window win = new ModifyCategory();
-            win.ShowDialog();
-
-        }
-        private void Delete(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Czy na pewno chcesz usunąć", "Usuń", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
-        
-        }
-        private void Back(object sender, RoutedEventArgs e)
-        {
-
-            this.NavigationService.Navigate(new Uri("Menu.xaml", UriKind.RelativeOrAbsolute));
-        }
 
         private void Save(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Add(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modify(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Back(object sender, RoutedEventArgs e)
         {
 
         }
