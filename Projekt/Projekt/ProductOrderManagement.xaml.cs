@@ -27,12 +27,13 @@ namespace Projekt
 
         private void Save(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void Add(object sender, RoutedEventArgs e)
         {
-
+            Window w = new AddNewProduct();
+            w.ShowDialog();
         }
 
         private void Modify(object sender, RoutedEventArgs e)
@@ -47,7 +48,7 @@ namespace Projekt
 
         private void Back(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("OrdersManagement.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

@@ -45,7 +45,11 @@ namespace Projekt
 
         private void Save(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult mb = MessageBox.Show(messageBoxText: "Czy na pewno chcesz zapisać?", "Zapisywanie", MessageBoxButton.YesNo);
+            if (mb.Equals(MessageBoxResult.Yes))
+            {
 
+            }
         }
     }
 }
