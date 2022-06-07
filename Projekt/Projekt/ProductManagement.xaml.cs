@@ -35,7 +35,7 @@ namespace Projekt
             proAdapter = new db_projectDataSetTableAdapters.ProductTableAdapter();
             proAdapter.Fill(db_ProjectDataSet.Product);
             productViewSource = ((CollectionViewSource)(this.FindResource("productViewSource")));
-            productViewSource.View.MoveCurrentToFirst();
+            //productViewSource.View.MoveCurrentToFirst();
         }
 
         private void Add(object sender, RoutedEventArgs e)
@@ -62,24 +62,11 @@ namespace Projekt
 
         private void Save(object sender, RoutedEventArgs e)
         {
-            try
+            MessageBoxResult mb = MessageBox.Show(messageBoxText: "Czy na pewno chcesz zapisać?", "Zapisywanie", MessageBoxButton.YesNo);
+            if (mb.Equals(MessageBoxResult.Yes))
             {
-                var diff = (db_projectDataSet)db_ProjectDataSet.GetChanges();
-                var a = proAdapter.Update(diff);
-                db_ProjectDataSet.Merge(diff);
-                db_ProjectDataSet.AcceptChanges();
-                db_ProjectDataSet.Dispose();
-                diff.Dispose();
-                proAdapter.Dispose();
-                MessageBox.Show(a.ToString());
-
+                proAdapter.Update(db_ProjectDataSet);
             }
-            catch
-            {
-                MessageBox.Show("Update failed");
-            }
-
-
         }
     }
 }

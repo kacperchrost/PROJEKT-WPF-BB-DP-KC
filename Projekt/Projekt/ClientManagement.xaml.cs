@@ -32,7 +32,7 @@ namespace Projekt
             proAdapter = new db_clientDataSetTableAdapters.ClientTableAdapter();
             proAdapter.Fill(db_ClientDataSet.Client);
             clientViewSource = ((CollectionViewSource)this.FindResource("clientViewSource"));
-            clientViewSource.View.MoveCurrentToFirst();
+            //clientViewSource.View.MoveCurrentToFirst();
         }
         private void Add(object sender, RoutedEventArgs e)
         {

@@ -19,9 +19,20 @@ namespace Projekt
     /// </summary>
     public partial class WorkersManagement : Page
     {
+        private db_employeeDataSet db_EmployeeDataSet;
+        private db_employeeDataSetTableAdapters.EmployeeTableAdapter proAdapter;
+        private CollectionViewSource employeeViewSource;
         public WorkersManagement()
         {
             InitializeComponent();
+        }
+        private void Window_Load(object sender, RoutedEventArgs e)
+        {
+            db_EmployeeDataSet = (db_employeeDataSet)this.FindResource("db_clientDataSet");
+            proAdapter = new db_employeeDataSetTableAdapters.EmployeeTableAdapter();
+            proAdapter.Fill(db_EmployeeDataSet.Employee);
+            employeeViewSource = ((CollectionViewSource)this.FindResource("employeeViewSource"));
+            //clientViewSource.View.MoveCurrentToFirst();
         }
         private void Add(object sender, RoutedEventArgs e)
         {
@@ -50,7 +61,7 @@ namespace Projekt
             MessageBoxResult mb = MessageBox.Show(messageBoxText: "Czy na pewno chcesz zapisać?", "Zapisywanie", MessageBoxButton.YesNo);
             if (mb.Equals(MessageBoxResult.Yes))
             {
-
+                proAdapter.Update(db_EmployeeDataSet);
             }
         }
     }
