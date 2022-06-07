@@ -7,51 +7,64 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Zarządzanie produktami w zamówieniu" Height="auto" Width="auto "
-      Background="Blue">
-
-    <StackPanel Height="450" Width="800">
-        <Grid Background="LightGray">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <GridSplitter Grid.Column="1" Width="5" ResizeBehavior="PreviousAndNext"/>
-            <Grid Grid.Column="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Button Grid.Row="0" Click="Save" Content="Zapisz" Margin="5" />
-                <Button Grid.Row="1" Click="Add" Content="Dodaj" Margin="5" />
-                <Button Grid.Row="2" Click="Modify"  Content="Modyfikuj" Margin="5"/>
-                <Button Grid.Row="3" Click="Delete" Content="Usuń" Margin="5"/>
-                <Button Grid.Row="4" Click="Back" Content="Cofnij" Margin="5"/>
-            </Grid>
-            <StackPanel Grid.Column="2">
-                <Grid>
+      Background="Blue"
+>
+    <Page.Resources>
+        <local:db_projectDataSet x:Key="db_projectDataSet"/>
+        <CollectionViewSource x:Key="productViewSource" Source="{Binding Product, Source={StaticResource db_projectDataSet}}"/>
+    </Page.Resources>
+    <StackPanel Height="450" Width="820" Background="LightGray">
+        <Border BorderBrush="DimGray" BorderThickness="1" Margin="5" Padding="5">
+            <StackPanel Height="430" Width="Auto">
+                <Grid Background="LightGray" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition  Height="430"/>
                     </Grid.RowDefinitions>
-                    <GroupBox Grid.Row="0" Margin="5" Header="Wyszukiwanie">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <Button Content="Szukaj" Grid.Column="1" Margin="5"></Button>
-                            <TextBox Grid.Column="0" Margin="5"></TextBox>
+                    <GridSplitter Grid.Column="1" Width="1" ResizeBehavior="PreviousAndNext" Background="DimGray"/>
+                    <Grid Grid.Column="0" Margin="0 5 5 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Click="Save" Content="Zapisz" Margin="5" />
+                        <Button Grid.Row="1" Click="Add" Content="Dodaj" Margin="5" />
+                        <Button Grid.Row="2" Click="Modify"  Content="Modyfikuj" Margin="5"/>
+                        <Button Grid.Row="3" Click="Delete" Content="Usuń" Margin="5"/>
+                        <Button Grid.Row="4" Click="Back" Content="Cofnij" Margin="5"/>
+                    </Grid>
+                    <StackPanel Grid.Column="2">
+                        <Grid DataContext="{StaticResource productViewSource}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <GroupBox Grid.Row="0" Margin="5" Header="Wyszukiwanie" BorderBrush="DimGray">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Content="Szukaj" Grid.Column="1" Margin="5"></Button>
+                                    <TextBox Grid.Column="0" Margin="5"></TextBox>
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Grid.Row="2" Margin="5" Height="365" Header="Elementy" BorderBrush="DimGray" BorderThickness="1">
+                                <DataGrid x:Name="ProductGrid" ItemsSource="{Binding}" />
+                            </GroupBox>
                         </Grid>
-                    </GroupBox>
-                    <GroupBox Grid.Row="2" Margin="5" Header="Elementy">
-                        <DataGrid x:Name="SupplyGrid" Height="200"/>
-                    </GroupBox>
+                    </StackPanel>
                 </Grid>
             </StackPanel>
-        </Grid>
+        </Border>
     </StackPanel>
+
+
 </Page>
