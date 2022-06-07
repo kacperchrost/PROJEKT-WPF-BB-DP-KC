@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Projekt"
         mc:Ignorable="d"
         Title="Zarządzanie produktami" Height="auto" Width="auto "
+      Loaded="Window_Load"
       Background="Blue">
     <Page.Resources>
         <local:db_employeeDataSet x:Key="db_employeeDataSet"/>

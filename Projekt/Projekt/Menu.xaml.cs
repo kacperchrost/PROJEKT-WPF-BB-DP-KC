@@ -40,7 +40,8 @@ namespace Projekt
         }
         private void Supply(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("SupplyManagement.xaml", UriKind.RelativeOrAbsolute));
+            MessageBox.Show("Ni mo", "Ni mo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            //this.NavigationService.Navigate(new Uri("SupplyManagement.xaml", UriKind.RelativeOrAbsolute));
         }
         private void Order(object sender, RoutedEventArgs e)
         {
@@ -52,7 +53,8 @@ namespace Projekt
         }
         private void Category(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("CategoryManagement.xaml", UriKind.RelativeOrAbsolute));
+            MessageBox.Show("Ni mo", "Ni mo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            //this.NavigationService.Navigate(new Uri("CategoryManagement.xaml", UriKind.RelativeOrAbsolute));
         }
         private void LogOut(object sender, RoutedEventArgs e)
         {
