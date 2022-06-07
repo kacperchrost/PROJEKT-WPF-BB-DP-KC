@@ -5,15 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt"
         mc:Ignorable="d"
-        Title="Frog" Height="450" Width="800"
-        WindowStyle="None" AllowsTransparency="True"
-        Background="Transparent" FontSize="20">
-    <Border BorderThickness="5" CornerRadius="0,20,200,20"
-        BorderBrush="Brown" Background="LightYellow"
-        >
-        <WrapPanel Margin="5">
-            <Label Margin="5" Padding="5">I'm special</Label>
-            <Button Margin="5" Click="Close" Padding="15,5">Close</Button>
-        </WrapPanel>
-    </Border>
+        Title="Window1" SizeToContent="WidthAndHeight"   
+      WindowStyle="None"  
+      AllowsTransparency="True"  
+      Background="Transparent">
+    <Canvas Width="600" Height="600" Name="RootLayout" >
+        <Path Stroke="Gray" StrokeThickness="2" Name="UIPath" >
+            <Path.Fill>
+                <LinearGradientBrush StartPoint="0.2,0" EndPoint="0.8,1" >
+                    <GradientStop Color="LightGray" Offset="0" />
+                    <GradientStop Color="Gray"  Offset="0.35" />
+                    <GradientStop Color="DarkGray" Offset="0.65" />
+                    <GradientStop Color="Black" Offset="0.85" />
+                </LinearGradientBrush>
+            </Path.Fill>
+            <Path.Data>
+                <PathGeometry >
+                    <PathFigure StartPoint="50,100">
+                        <ArcSegment Size="350,180" RotationAngle="45" IsLargeArc="True"  
+  
+                                    SweepDirection="CounterClockwise" Point="100,50" />
+                        <LineSegment Point="20,20"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+        <Label Width="353" Height="260" FontSize="20" FontFamily="Georgia" FontWeight="Bold"  
+           HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  
+           Canvas.Left="113" Canvas.Top="134"  
+           Foreground="Blue" RenderTransformOrigin="0.5,0.5" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-42.724"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+            <Image Source="https://www.wykop.pl/cdn/c3201142/comment_1NbKqnJdp5Pg9SFR58u2OtEEPHca6B87,w400.jpg"/>
+        </Label>
+        <Button Canvas.Left="195" Canvas.Top="59" Height="0" Width="0"  Name="Closebtn" Click="Close">
+            <Button.Template>
+                <ControlTemplate>
+                    <Canvas>
+                        <Rectangle Width="20" Height="20" Stroke="DarkBlue" RadiusX="2" RadiusY="2">
+                            <Rectangle.Fill>
+                                <SolidColorBrush x:Name="myAnimatedBrush" Color="Blue" />
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <Line X1="3" Y1="3" X2="17" Y2="17" Stroke="White" StrokeThickness="2"></Line>
+                        <Line X1="17" Y1="3" X2="3" Y2="17" Stroke="White" StrokeThickness="2"></Line>
+                    </Canvas>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Canvas>
 </Window>

@@ -24,7 +24,6 @@ namespace Projekt
         {
             InitializeComponent();
         }
-
         private void Close(object sender, RoutedEventArgs e)
         {
             Close();
