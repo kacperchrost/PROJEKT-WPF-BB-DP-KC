@@ -7,15 +7,24 @@
         mc:Ignorable="d"
         Title="Zarządzanie zamówieniami" Height="auto" Width="auto"
       Background="Blue">
-    <StackPanel Height="450" Width="800" >
+    <Page.Resources>
+        <local:db_ordersDataSet x:Key="db_ordersDataSet"/>
+        <CollectionViewSource x:Key="ordersViewSource" Source="{Binding Orders, Source={StaticResource db_ordersDataSet}}"/>
+    </Page.Resources>
+    <StackPanel Height="450" Width="820" Background="LightGray">
+        <Border BorderBrush="DimGray" BorderThickness="1" Margin="5" Padding="5">
+        <StackPanel Height="430" Width="Auto">
         <Grid Background="LightGray">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <GridSplitter Grid.Column="1" Width="5" ResizeBehavior="PreviousAndNext"/>
-            <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="430"/>
+                    </Grid.RowDefinitions>
+                    <GridSplitter Grid.Column="1" Width="1" ResizeBehavior="PreviousAndNext" Background="DimGray"/>
+                    <Grid Grid.Column="0" Margin="0 5 5 0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -33,28 +42,30 @@
                 <Button  Grid.Row="5" Content="Drukuj" Margin="5" Click="PrintOrder"/>
                 <Button  Grid.Row="6" Content="Cofnij" Margin="5" Click="BackFromOrders"/>
             </Grid>
-            <StackPanel Grid.Column="2">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <GroupBox Grid.Row="0" Margin="5" Header="Wyszukiwanie">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <Button Content="Szukaj" Grid.Column="1" Margin="5"></Button>
-                            <TextBox Grid.Column="0" Margin="5"></TextBox>
+                    <StackPanel Grid.Column="2">
+                        <Grid DataContext="{StaticResource ordersViewSource}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <GroupBox Grid.Row="0" Margin="5" Header="Wyszukiwanie" BorderBrush="DimGray">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Content="Szukaj" Grid.Column="1" Margin="5"></Button>
+                                    <TextBox Grid.Column="0" Margin="5"></TextBox>
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Grid.Row="2" Margin="5" Height="365" Header="Elementy" BorderBrush="DimGray" BorderThickness="1">
+                                <DataGrid x:Name="OrdersGrid" ItemsSource="{Binding}" />
+                            </GroupBox>
                         </Grid>
-                    </GroupBox>
-                    <GroupBox Grid.Row="2" Margin="5" Header="Elementy">
-                        <DataGrid x:Name="OrdersGrid" Height="200"/>
-                    </GroupBox>
-                </Grid>
-            </StackPanel>
+                    </StackPanel>
         </Grid>
+            </StackPanel>
+        </Border>
     </StackPanel>
 
 </Page>

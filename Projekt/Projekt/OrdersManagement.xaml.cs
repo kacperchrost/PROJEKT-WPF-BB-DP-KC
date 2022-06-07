@@ -20,9 +20,20 @@ namespace Projekt
     /// </summary>
     public partial class OrdersManagement : Page
     {
+        private db_ordersDataSet db_OrdersDataSet;
+        private db_ordersDataSetTableAdapters.OrdersTableAdapter proAdapter;
+        private CollectionViewSource ordersViewSource;
         public OrdersManagement()
         {
             InitializeComponent();
+        }
+        private void Window_Load(object sender, RoutedEventArgs e)
+        {
+            db_OrdersDataSet = (db_ordersDataSet)this.FindResource("db_ordersDataSet");
+            proAdapter = new db_ordersDataSetTableAdapters.OrdersTableAdapter();
+            proAdapter.Fill(db_OrdersDataSet.Orders);
+            ordersViewSource = ((CollectionViewSource)this.FindResource("ordersViewSource"));
+            //clientViewSource.View.MoveCurrentToFirst();
         }
 
         private void AddNewOrder(object sender, RoutedEventArgs e)
@@ -52,7 +63,7 @@ namespace Projekt
             MessageBoxResult mb = MessageBox.Show(messageBoxText: "Czy na pewno chcesz zapisać?", "Zapisywanie", MessageBoxButton.YesNo);
             if (mb.Equals(MessageBoxResult.Yes))
             {
-
+                proAdapter.Update(db_OrdersDataSet);
             }
         }
 
@@ -61,8 +72,13 @@ namespace Projekt
             MessageBoxResult mb = MessageBox.Show(messageBoxText: "Czy na pewno chcesz wydrukować?", "Drukowanie", MessageBoxButton.YesNo);
             if (mb.Equals(MessageBoxResult.Yes))
             {
-               /* PrintDG print = new PrintDG();
-                print.printDG(datagridName, "Title");*/
+                /* PrintDG print = new PrintDG();
+                 print.printDG(datagridName, "Title");*/
+                PrintDialog myPrintDialog = new PrintDialog();
+                if (myPrintDialog.ShowDialog() == true)
+                {
+                    myPrintDialog.PrintVisual(OrdersGrid, "Form All Controls Print");
+                }
             }
         }
 

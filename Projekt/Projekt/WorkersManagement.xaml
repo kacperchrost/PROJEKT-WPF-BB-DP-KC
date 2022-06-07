@@ -8,8 +8,8 @@
         Title="Zarządzanie produktami" Height="auto" Width="auto "
       Background="Blue">
     <Page.Resources>
-        <local:db_clientDataSet x:Key="db_employeeDataSet"/>
-        <CollectionViewSource x:Key="employeeViewSource" Source="{Binding Client, Source={StaticResource db_employeeDataSet}}"/>
+        <local:db_employeeDataSet x:Key="db_employeeDataSet"/>
+        <CollectionViewSource x:Key="employeeViewSource" Source="{Binding Employee, Source={StaticResource db_employeeDataSet}}"/>
     </Page.Resources>
     <StackPanel Height="450" Width="820" Background="LightGray">
         <Border BorderBrush="DimGray" BorderThickness="1" Margin="5" Padding="5">
