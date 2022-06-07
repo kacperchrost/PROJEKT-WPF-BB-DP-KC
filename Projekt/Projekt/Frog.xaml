@@ -1,0 +1,19 @@
+﻿<Window x:Class="Projekt.Frog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt"
+        mc:Ignorable="d"
+        Title="Frog" Height="450" Width="800"
+        WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent" FontSize="20">
+    <Border BorderThickness="5" CornerRadius="0,20,200,20"
+        BorderBrush="Brown" Background="LightYellow"
+        >
+        <WrapPanel Margin="5">
+            <Label Margin="5" Padding="5">I'm special</Label>
+            <Button Margin="5" Click="Close" Padding="15,5">Close</Button>
+        </WrapPanel>
+    </Border>
+</Window>

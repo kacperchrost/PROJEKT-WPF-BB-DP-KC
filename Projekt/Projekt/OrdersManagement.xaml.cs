@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,13 +61,14 @@ namespace Projekt
             MessageBoxResult mb = MessageBox.Show(messageBoxText: "Czy na pewno chcesz wydrukować?", "Drukowanie", MessageBoxButton.YesNo);
             if (mb.Equals(MessageBoxResult.Yes))
             {
-
+               /* PrintDG print = new PrintDG();
+                print.printDG(datagridName, "Title");*/
             }
         }
 
         private void ProductOrder(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("ProductOrderManagement.xaml", UriKind.RelativeOrAbsolute));
-        }
+        } 
     }
 }

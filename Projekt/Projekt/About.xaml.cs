@@ -40,5 +40,11 @@ namespace Projekt
         {
             NavigationService.Navigate(new Uri("Menu.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void Frog(object sender, RoutedEventArgs e)
+        {
+            Window frog = new Frog();
+            frog.Show();
+        }
     }
 }
