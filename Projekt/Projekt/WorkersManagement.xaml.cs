@@ -28,7 +28,7 @@ namespace Projekt
         }
         private void Window_Load(object sender, RoutedEventArgs e)
         {
-            db_EmployeeDataSet = (db_employeeDataSet)this.FindResource("db_clientDataSet");
+            db_EmployeeDataSet = (db_employeeDataSet)this.FindResource("db_employeeDataSet");
             proAdapter = new db_employeeDataSetTableAdapters.EmployeeTableAdapter();
             proAdapter.Fill(db_EmployeeDataSet.Employee);
             employeeViewSource = ((CollectionViewSource)this.FindResource("employeeViewSource"));
