@@ -19,9 +19,20 @@ namespace Projekt
     /// </summary>
     public partial class ClientManagement : Page
     {
+        private db_clientDataSet db_ClientDataSet;
+        private db_clientDataSetTableAdapters.ClientTableAdapter proAdapter;
+        private CollectionViewSource clientViewSource;
         public ClientManagement()
         {
             InitializeComponent();
+        } 
+        private void Window_Load(object sender, RoutedEventArgs e)
+        {
+            db_ClientDataSet = (db_clientDataSet)this.FindResource("db_clientDataSet");
+            proAdapter = new db_clientDataSetTableAdapters.ClientTableAdapter();
+            proAdapter.Fill(db_ClientDataSet.Client);
+            clientViewSource = ((CollectionViewSource)this.FindResource("clientViewSource"));
+            clientViewSource.View.MoveCurrentToFirst();
         }
         private void Add(object sender, RoutedEventArgs e)
         {
@@ -48,7 +59,7 @@ namespace Projekt
             MessageBoxResult mb = MessageBox.Show(messageBoxText: "Czy na pewno chcesz zapisać?", "Zapisywanie", MessageBoxButton.YesNo);
             if (mb.Equals(MessageBoxResult.Yes))
             {
-
+                proAdapter.Update(db_ClientDataSet);
             }
         }
     }

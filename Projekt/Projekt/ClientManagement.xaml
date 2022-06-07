@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt"
         mc:Ignorable="d"
+      Loaded="Window_Load"
         Title="Zarządzanie klientami" Height="auto" Width="auto "
       Background="Blue">
+    <Page.Resources>
+        <local:db_clientDataSet x:Key="db_clientDataSet"/>
+        <CollectionViewSource x:Key="clientViewSource" Source="{Binding Client, Source={StaticResource db_clientDataSet}}"/>
+    </Page.Resources>
     <StackPanel Height="450" Width="800">
         <Grid Background="LightGray">
             <Grid.ColumnDefinitions>
@@ -30,7 +35,7 @@
                 <Button Grid.Row="4" Click="Back"  Content="Cofnij" Margin="5"/>
             </Grid>
             <StackPanel Grid.Column="2">
-                <Grid>
+                <Grid DataContext="{StaticResource clientViewSource}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
@@ -46,7 +51,7 @@
                         </Grid>
                     </GroupBox>
                     <GroupBox Grid.Row="2" Margin="5" Header="Elementy">
-                        <DataGrid x:Name="ClientGrid" Height="200"/>
+                        <DataGrid x:Name="ClientGrid" Height="200" ItemsSource="{Binding}"/>
                     </GroupBox>
                 </Grid>
             </StackPanel>

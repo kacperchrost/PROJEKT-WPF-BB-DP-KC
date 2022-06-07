@@ -26,7 +26,7 @@ namespace Projekt
         public ProductManagement()
         {
             InitializeComponent();
-            
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -35,8 +35,7 @@ namespace Projekt
             proAdapter = new db_projectDataSetTableAdapters.ProductTableAdapter();
             proAdapter.Fill(db_ProjectDataSet.Product);
             productViewSource = ((CollectionViewSource)(this.FindResource("productViewSource")));
-            //productViewSource.View.MoveCurrentToFirst();
-            //todo zorbić to dla reszty i dodać przycisk save
+            productViewSource.View.MoveCurrentToFirst();
         }
 
         private void Add(object sender, RoutedEventArgs e)
@@ -63,6 +62,23 @@ namespace Projekt
 
         private void Save(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                var diff = (db_projectDataSet)db_ProjectDataSet.GetChanges();
+                var a = proAdapter.Update(diff);
+                db_ProjectDataSet.Merge(diff);
+                db_ProjectDataSet.AcceptChanges();
+                db_ProjectDataSet.Dispose();
+                diff.Dispose();
+                proAdapter.Dispose();
+                MessageBox.Show(a.ToString());
+
+            }
+            catch
+            {
+                MessageBox.Show("Update failed");
+            }
+
 
         }
     }
