@@ -9,42 +9,42 @@
       Loaded="Window_Load"
       Background="Blue">
     <Page.Resources>
-        <local:db_ordersDataSet x:Key="db_ordersDataSet"/>
-        <CollectionViewSource x:Key="ordersViewSource" Source="{Binding Orders, Source={StaticResource db_ordersDataSet}}"/>
+        <local:db_orderMtMDataSet x:Key="db_orderMtMDataSet"/>
+        <CollectionViewSource x:Key="ordersViewSource1" Source="{Binding Orders, Source={StaticResource db_orderMtMDataSet}}"/>
     </Page.Resources>
     <StackPanel Height="450" Width="820" Background="LightGray">
         <Border BorderBrush="DimGray" BorderThickness="1" Margin="5" Padding="5">
-        <StackPanel Height="430" Width="Auto">
-        <Grid Background="LightGray">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+            <StackPanel Height="430" Width="Auto">
+                <Grid Background="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition  Height="430"/>
                     </Grid.RowDefinitions>
                     <GridSplitter Grid.Column="1" Width="1" ResizeBehavior="PreviousAndNext" Background="DimGray"/>
                     <Grid Grid.Column="0" Margin="0 5 5 0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Button  Grid.Row="0" Content="Zapisz" Margin="5" Click="Save" />
-                <Button  Grid.Row="1" Content="Dodaj" Margin="5" Click="AddNewOrder" />
-                <Button  Grid.Row="2" Content="Modyfikuj" Margin="5" Click="ModifyOrder"/>
-                <Button  Grid.Row="3" Content="Usuń" Margin="5" Click="DeleteOrder"/>
-                <Button  Grid.Row="4" Content="Produkty" Margin="5" Click="ProductOrder"/>
-                <Button  Grid.Row="5" Content="Drukuj" Margin="5" Click="PrintOrder"/>
-                <Button  Grid.Row="6" Content="Cofnij" Margin="5" Click="BackFromOrders"/>
-            </Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Button  Grid.Row="0" Content="Zapisz" Margin="5" Click="Save" />
+                        <Button  Grid.Row="1" Content="Dodaj" Margin="5" Click="AddNewOrder" />
+                        <Button  Grid.Row="2" Content="Modyfikuj" Margin="5" Click="ModifyOrder"/>
+                        <Button  Grid.Row="3" Content="Usuń" Margin="5" Click="DeleteOrder"/>
+                        <Button  Grid.Row="4" Content="Produkty" Margin="5" Click="ProductOrder"/>
+                        <Button  Grid.Row="5" Content="Drukuj" Margin="5" Click="PrintOrder"/>
+                        <Button  Grid.Row="6" Content="Cofnij" Margin="5" Click="BackFromOrders"/>
+                    </Grid>
                     <StackPanel Grid.Column="2">
-                        <Grid DataContext="{StaticResource ordersViewSource}">
+                        <Grid DataContext="{StaticResource ordersViewSource1}">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
@@ -60,11 +60,11 @@
                                 </Grid>
                             </GroupBox>
                             <GroupBox Grid.Row="2" Margin="5" Height="365" Header="Elementy" BorderBrush="DimGray" BorderThickness="1">
-                                <DataGrid x:Name="OrdersGrid" ItemsSource="{Binding}" />
+                                <DataGrid x:Name="OrdersGrid" ItemsSource="{Binding Source={StaticResource ordersViewSource1}}" />
                             </GroupBox>
                         </Grid>
                     </StackPanel>
-        </Grid>
+                </Grid>
             </StackPanel>
         </Border>
     </StackPanel>

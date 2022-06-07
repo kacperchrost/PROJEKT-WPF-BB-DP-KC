@@ -20,8 +20,8 @@ namespace Projekt
     /// </summary>
     public partial class OrdersManagement : Page
     {
-        private db_ordersDataSet db_OrdersDataSet;
-        private db_ordersDataSetTableAdapters.OrdersTableAdapter proAdapter;
+        private db_orderMtMDataSet db_OrdersDataSet;
+        private db_orderMtMDataSetTableAdapters.OrdersTableAdapter proAdapter;
         private CollectionViewSource ordersViewSource;
         public OrdersManagement()
         {
@@ -29,10 +29,10 @@ namespace Projekt
         }
         private void Window_Load(object sender, RoutedEventArgs e)
         {
-            db_OrdersDataSet = (db_ordersDataSet)this.FindResource("db_ordersDataSet");
-            proAdapter = new db_ordersDataSetTableAdapters.OrdersTableAdapter();
+            db_OrdersDataSet = (db_orderMtMDataSet)this.FindResource("db_orderMtMDataSet");
+            proAdapter = new db_orderMtMDataSetTableAdapters.OrdersTableAdapter();
             proAdapter.Fill(db_OrdersDataSet.Orders);
-            ordersViewSource = ((CollectionViewSource)this.FindResource("ordersViewSource"));
+            ordersViewSource = ((CollectionViewSource)this.FindResource("ordersViewSource1"));
             //clientViewSource.View.MoveCurrentToFirst();
         }
 
@@ -63,7 +63,7 @@ namespace Projekt
             MessageBoxResult mb = MessageBox.Show(messageBoxText: "Czy na pewno chcesz zapisać?", "Zapisywanie", MessageBoxButton.YesNo);
             if (mb.Equals(MessageBoxResult.Yes))
             {
-                proAdapter.Update(db_OrdersDataSet);
+                proAdapter.Adapter.Update(db_OrdersDataSet);
             }
         }
 
